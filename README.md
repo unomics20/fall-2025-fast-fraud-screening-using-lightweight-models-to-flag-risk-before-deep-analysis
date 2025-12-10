@@ -110,7 +110,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 | Metric | Result | Interpretation |
 |:-----------:|:-----------:|:-----------:|
-| Fraud Detection Recall | 83% | % of fraud successfully flagged |
+| Fraud Detection Recall | 84% | % of fraud successfully flagged |
 | False Negative Rate | 17% | % of fraud missed |
 | False Positive Rate | 16% | % of legitimate transactions flagged |
 | Synthetic Loss Avoided | $3.8M | Proxy dollars saved by catching fraud |
