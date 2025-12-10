@@ -27,7 +27,7 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 ## Introduction
 Financial fraud is a growing challenge. This project proposes a two-stage fraud detection framework: a lightweight "surrogate model" screens transactions, prioritizing high recall, then flagged transactions go to intensive models/human analysts for verification. This reduces computational load, speeds detection, and focuses resources.
 
-We find that traditional metrics are misleading for our analysis and we propose an alternative metric. We use the Lift metric for fraud detection assesment, prioritizing recall and predictive positive rates for efficiency. Using J.P. Morgan Chase & Co's synthetic data, the XGBoost model achieved 7x Lift and 84% recall, flagging about 3 in 4 fraud cases while incorrectly flagging less than 16% of legitimate transactions.
+We find that traditional metrics are misleading for our analysis and we propose an alternative metric. We use the Lift metric for fraud detection assesment, prioritizing recall and predictive positive rates for efficiency. Using J.P. Morgan Chase & Co's synthetic data, the XGBoost model achieved 7x Lift and 83% recall, flagging about 3 in 4 fraud cases while incorrectly flagging less than 16% of legitimate transactions.
 
 ## Dataset
 
@@ -140,6 +140,12 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 | 0.70 | 50.4% | 11.64x | 4.3% | $2.99M | $2.86M |
 
 </div>
+
+<p align="center">
+<b>Figure 4:</b> Financial Impact vs. Recall[^1]</p>
+<p align="center">
+<img src="visualization_files/fin_impact_vs_recall.png" width=500 />
+</p>
 
 [^1]: Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50/hour taking 15 minutes per case review, and an initial triage cost of $12.50.
 
