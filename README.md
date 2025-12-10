@@ -187,3 +187,4 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 - [`fraud_and_non-fraud_vs_transaction_types.png`](visualization_files/fraud_and_non-fraud_vs_transaction_types.png): bar graph of number of fraudulent and non-fraudulent transactions per type
 - [`fraud_number_vs_transaction_types.png`](visualization_files/fraud_number_vs_transaction_types.png): bar graph of just fraudulent transactions per type
 - [`model_perf_on_fraud_losses.png`](visualization_files/model_perf_on_fraud_losses.png): bar graph of model performance on estimated fraud losses
+- ['fin_impact_vs_recall.png`](visualization_files/fin_impact_vs_recall.png): plot of financial impact --- loss avoided, review costs, and net benefits --- vs. recall
