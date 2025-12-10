@@ -102,14 +102,7 @@ Our KPIs include the percentage of fraud transactions correctly flagged (Recall)
 
 ### Business KPIs
 
-We use synthetic data to create realistic fraud risk KPIs, evaluating the model on false positives, analyst workload savings, simulated loss-avoidance scores, total loss avoided (USD), and total review cost. Key takeaways:
-
-* Our lightweight model offers high speed and low-computational overhead suitable for real-time deployment.
-* At the threshold of 0.36, the model:
-  - delivers $3.32 million in net benefit, which is $2.16 million better than operatoring without a filter[^1];
-  - flags 83% of fraud cases, catching $3.8 million in fraudulent transactions before they occur[^1].
-* Adjustments in the model can be readily made to align with bank fraud pre-screening strategies.
-
+We use synthetic data to create realistic fraud risk KPIs, evaluating the model on false positives, analyst workload savings, simulated loss-avoidance scores, total loss avoided (USD), and total review cost.
 <div align="center">
 <b>Table 3:</b> Optimal Business KPIs
 
@@ -123,6 +116,14 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 | Missed Fraud Risk | $0.47M | Proxy dollars lost from missed fraud |
 
 </div>
+
+*Key takeaways:*
+
+* Our lightweight model offers high speed and low-computational overhead suitable for real-time deployment.
+* At the threshold of 0.36, the model:
+  - delivers $3.32 million in net benefit, which is $2.16 million better than operatoring without a filter[^1];
+  - flags 83% of fraud cases, catching $3.8 million in fraudulent transactions before they occur[^1].
+* Adjustments in the model can be readily made to align with bank fraud pre-screening strategies.
 
 <div align="center">
 <b>Table 4:</b> Business KPIs over various XGBoost models
@@ -139,7 +140,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 </div>
 
-[^1]:*Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50/hour taking 15 minutes per case review, and an initial triage cost of $12.50.* 
+[^1]: Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50/hour taking 15 minutes per case review, and an initial triage cost of $12.50.
 
 ## Challenges
 
