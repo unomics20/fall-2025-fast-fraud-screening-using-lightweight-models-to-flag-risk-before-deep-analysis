@@ -56,7 +56,7 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 
 ### Models
 
-Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
+Logistic Regression, XGBoost, Linear Discriminant Analysis, PCA
 
 ## Results
 
