@@ -106,8 +106,8 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 * Our lightweight model offers high speed and low-computational overhead suitable for real-time deployment.
 * At the threshold of 0.36, the model:
-- delivers $3.32 million in net benefit, which is $2.16 million better than operatoring without a filter[^1];
-- flags 83% of fraud cases, catching $3.8 million in fraudulent transactions before they occur[^1].
+  - delivers $3.32 million in net benefit, which is $2.16 million better than operatoring without a filter[^1];
+  - flags 83% of fraud cases, catching $3.8 million in fraudulent transactions before they occur[^1].
 * Adjustments in the model can be readily made to align with bank fraud pre-screening strategies.
 
 <div align="center">
