@@ -18,8 +18,8 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 1. [Introduction](#introduction)
 2. [Dataset](#dataset)
 3. [Methods and Models](#methods-and-models)
-4. [Key Performance Indicators](#key-performance-indicators-kpis)
-5. [Results](#results)
+4. [Results](#results)
+5. [Key Performance Indicators](#key-performance-indicators-kpis)
 6. [Challenges](#challenges)
 7. [Files](#files)
 
@@ -58,39 +58,6 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 
 Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
-
-## Key Performance Indicators (KPIs)
-
-### Model Performance KPIs
-
-Our KPIs include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
-
-### Business KPIs
-
-We use synthetic data to create realistic fraud risk KPIs, evaluating the model on false positives, analyst workload savings, simulated loss-avoidance scores, total loss avoided (USD), and total review cost. Key takeaways:
-
-- Our lightweight model offers high speed and low computational overhead, suitable for real-time deployment.
-- Initially, the model showed a low false positive rate (~1%).
-- However, it currently has a high fraud miss rate (~66%), requiring threshold tuning for recall-first performance.
-- With adjustments, we anticipate achieving high recall, aligning with bank fraud pre-screening strategies.
-
-<div align="center">
-<b>Table 1:</b> Business KPIs
-
-| Metric | Result | Interpretation |
-|:-----------:|:-----------:|:-----------:|
-| Fraud Detection Recall | 24% | % of fraud successfully flagged |
-| False Negative Rate | 76% | % of fraud missed |
-| False Positive Rate | >1% | % of legitimate transactions flagged |
-| Synthetic Loss Avoided | $2,357,370 | Proxy dollars saved by catching fraud |
-| Total Review Cost | $20,960 | Cost of analyst reviewing alerts |
-| Missed Fraud Risk | $1,916,768 | Proxy dollars lost from missed fraud |
-
-</div>
-
-*Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
-
-
 ## Results
 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold (0.5) fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
@@ -128,6 +95,38 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 <p align="center">
 <img src="visualization_files/regressions_lift_vs_recall.png" width=500 />
 </p>
+
+## Key Performance Indicators (KPIs)
+
+### Model Performance KPIs
+
+Our KPIs include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
+
+### Business KPIs
+
+We use synthetic data to create realistic fraud risk KPIs, evaluating the model on false positives, analyst workload savings, simulated loss-avoidance scores, total loss avoided (USD), and total review cost. Key takeaways:
+
+- Our lightweight model offers high speed and low computational overhead, suitable for real-time deployment.
+- Initially, the model showed a low false positive rate (~1%).
+- However, it currently has a high fraud miss rate (~66%), requiring threshold tuning for recall-first performance.
+- With adjustments, we anticipate achieving high recall, aligning with bank fraud pre-screening strategies.
+
+<div align="center">
+<b>Table 1:</b> Business KPIs
+
+| Metric | Result | Interpretation |
+|:-----------:|:-----------:|:-----------:|
+| Fraud Detection Recall | 24% | % of fraud successfully flagged |
+| False Negative Rate | 76% | % of fraud missed |
+| False Positive Rate | >1% | % of legitimate transactions flagged |
+| Synthetic Loss Avoided | $2,357,370 | Proxy dollars saved by catching fraud |
+| Total Review Cost | $20,960 | Cost of analyst reviewing alerts |
+| Missed Fraud Risk | $1,916,768 | Proxy dollars lost from missed fraud |
+
+</div>
+
+*Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
+
 
 
 ## Challenges
