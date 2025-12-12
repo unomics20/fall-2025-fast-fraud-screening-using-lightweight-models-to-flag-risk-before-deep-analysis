@@ -173,7 +173,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 ### Notebooks and Scripts
 
 - [`requirements.txt`](requirements.txt): Python package requirements to run Jupyter notebooks
-- [`Fast_Fraud_Screening_Driver_ntbk.py`](notebooks/Fast_Fraud_Screening_Driver_ntbk.py): This script runs Jupyter notebooks for `Fast_Fraud_Screening_Model.ipynb`, `Fast_Fraud_Screening_Business_KPIs.ipynb`, and `Fast_Fraud_Screening_Report_Visualisations.ipynb` programmatically using `nbclient`. Each notebook will execute cell by cell — exactly as if you ran it manually in Jupyter. This notebook will print errors from any notebook however, it will not stop the next notebook from running.
+- [`Fast_Fraud_Screening_Driver.py`](notebooks/Fast_Fraud_Screening_Driver.py): This script runs Jupyter notebooks for `Fast_Fraud_Screening_Model.ipynb`, `Fast_Fraud_Screening_Business_KPIs.ipynb`, and `Fast_Fraud_Screening_Report_Visualisations.ipynb` programmatically using `nbclient`. Each notebook will execute cell by cell — exactly as if you ran it manually in Jupyter. This notebook will print errors from any notebook however, it will not stop the next notebook from running.
 - [`Fast_Fraud_Screening_Model.ipynb`](notebooks/Fast_Fraud_Screening_Model.ipynb): Contains the code generating the multi-directed graph and the different models (Logistic Regression and XGBoost)
 - [`Fast_Fraud_Screening_Report_Visualization.ipynb`](notebooks/Fast_Fraud_Screening_Report_Visualization.ipynb): Code for generating data visualizations in the presentation and readme files
 - [`Fast_Fraud_Screening_Business_KPIs.ipynb`](notebooks/Fast_Fraud_Screening_Business_KPIs.ipynb): Code for generating statistics, tables, and plots on Business KPIs
@@ -186,5 +186,4 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 - [`lift_vs_recall_graph.png`](visualization_files/lift_vs_recall_graph.png): lift vs. recall plot over various models
 - [`fraud_and_non-fraud_vs_transaction_types.png`](visualization_files/fraud_and_non-fraud_vs_transaction_types.png): bar graph of number of fraudulent and non-fraudulent transactions per type
 - [`fraud_number_vs_transaction_types.png`](visualization_files/fraud_number_vs_transaction_types.png): bar graph of just fraudulent transactions per type
-- [`model_perf_on_fraud_losses.png`](visualization_files/model_perf_on_fraud_losses.png): bar graph of model performance on estimated fraud losses
-- ['fin_impact_vs_recall.png`](visualization_files/fin_impact_vs_recall.png): plot of financial impact --- loss avoided, review costs, and net benefits --- vs. recall
+- [`fin_impact_vs_recall.png`](visualization_files/fin_impact_vs_recall.png): plot of financial impact --- loss avoided, review costs, and net benefits --- vs. recall
